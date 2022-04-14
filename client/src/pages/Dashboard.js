@@ -23,37 +23,37 @@ function Dashboard() {
     return <Navigate to="/login" replace={true} />;
   };
 
-  const handleDBUpdateButton = async (evt) => {
-    evt.preventDefault();
+  // const handleDBUpdateButton = async (evt) => {
+  //   evt.preventDefault();
 
-    const { money, appleCount, gemCount, trees, juicers, mashers, ovens } =
-      state;
-    console.log(
-      money +
-        " " +
-        appleCount +
-        " " +
-        gemCount +
-        " " +
-        trees +
-        " " +
-        juicers +
-        " " +
-        mashers +
-        " " +
-        ovens
-    );
+  //   const { money, appleCount, gemCount, trees, juicers, mashers, ovens } =
+  //     state;
+  //   console.log(
+  //     money +
+  //       " " +
+  //       appleCount +
+  //       " " +
+  //       gemCount +
+  //       " " +
+  //       trees +
+  //       " " +
+  //       juicers +
+  //       " " +
+  //       mashers +
+  //       " " +
+  //       ovens
+  //   );
 
-    try {
-      const { data } = await updateDB({
-        variables: { money: money },
-      });
+  //   try {
+  //     const { data } = await updateDB({
+  //       variables: { money: money },
+  //     });
 
-      // Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  //     // Auth.login(data.login.token);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   // consider moving 👇 to 'Upgrade' component script
   // need event handler for upgrades
@@ -76,9 +76,9 @@ function Dashboard() {
      */
 
     <div className="">
-      <button onClick={handleDBUpdateButton}>
+      {/* <button onClick={handleDBUpdateButton}>
         click here to send globalstate gameplay variables to server
-      </button>
+      </button> */}
 
       <div className="form-label">Dashboard</div>
       

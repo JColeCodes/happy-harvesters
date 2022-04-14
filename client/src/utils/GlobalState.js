@@ -8,7 +8,7 @@ const defaultGameVariables = {
   initialAppleInventory: 5,
   // for Tree
   applesForNewTree: 3,
-  appleGrowTime: 30,
+  appleGrowTime: 10,
   applesGrown: 5,
   appleSaleRevenue: 1,
   // for Juncer
@@ -37,13 +37,13 @@ const GlobalProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useAppReducer({
 
     // TODO: username, email, and password should not be hard coded
-    username: "Happiest Harvester",
+    username: "H H",
     email: "happy@harvester.com",
     password: "password",
-    money: 100,
+    money: 0,
 
-    appleCount: 500,
-    gemCount: 20,
+    appleCount: 5,
+    gemCount: 0,
 
     gameVariables: defaultGameVariables,
     trees: [{}],
